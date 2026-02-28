@@ -1,0 +1,288 @@
+# MindBridge MongoDB & Node.js .gitignore
+
+# ============================================================================
+# ENVIRONMENT & SECRETS
+# ============================================================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+
+# API Keys & Credentials (if accidentally committed)
+.keys
+.secrets
+*.pem
+*.key
+
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+lerna-debug.log
+
+# ============================================================================
+# BUILD OUTPUT
+# ============================================================================
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+.output/
+.env.build
+
+# Frontend specific
+client/dist/
+client/build/
+
+# Backend specific
+server/dist/
+server/build/
+
+# ============================================================================
+# RUNTIME DATA & LOGS
+# ============================================================================
+logs/
+*.log
+*.log.*
+.pnpm-debug.log*
+
+# Database
+data/
+*.db
+*.mongodb
+dump/
+
+# ============================================================================
+# TESTING & COVERAGE
+# ============================================================================
+coverage/
+.nyc_output/
+.coverage
+coverage.lcov
+*.lcov
+
+# Jest
+.jest_cache/
+.jest/
+
+# ============================================================================
+# IDE & EDITOR
+# ============================================================================
+.vscode/
+.vscode-server/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+.DS_Store
+.DS_Store?
+._*
+._.
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+.atom/
+.jshintrc
+.eslintignore
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+
+# ============================================================================
+# RUNTIME & PROCESS
+# ============================================================================
+.pm2/
+pm2.log
+.forever/
+
+node_modules/
+package-lock.json
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# ============================================================================
+# OS SPECIFIC
+# ============================================================================
+Thumbs.db
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+
+# ============================================================================
+# UPLOADS & USER-GENERATED CONTENT
+# ============================================================================
+uploads/
+public/uploads/
+server/uploads/
+
+# PDFs, documents, media files
+*.pdf
+*.doc
+*.docx
+*.xlsx
+*.mp3
+*.wav
+*.mp4
+
+# ============================================================================
+# DATABASE & BACKUPS
+# ============================================================================
+*.dump
+*.backup
+*.bak
+backups/
+mongodb_dump/
+db-backup/
+
+# ============================================================================
+# DOCKER & CONTAINERIZATION
+# ============================================================================
+.dockerignore
+docker-compose.override.yml
+
+# ============================================================================
+# CREDENTIALS & SENSITIVE DATA
+# ============================================================================
+# AWS
+credentials
+.aws/
+credentials.json
+
+# GCP
+service-account-key.json
+gcp-key.json
+
+# Azure
+.azure/
+
+# Private keys
+*.ppk
+*.pem
+private/
+secrets/
+
+# ============================================================================
+# MISC PROJECT FILES
+# ============================================================================
+.history/
+.editorconfig
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+.directory
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# ============================================================================
+# MONOREPO & WORKSPACE
+# ============================================================================
+lerna.json
+.monorepo-cache/
+
+# ============================================================================
+# COMMON MISTAKES
+# ============================================================================
+# Don't accidentally commit these:
+.env*.prod
+.env*.production
+.auth
+.tokens
+jwt-secret.txt
+mongo-uri.txt
+
+# Tests that generate data
+test-data/
+test-output/
+
+# Development artifacts
+dev/
+experimental/
+poc/
+
+# ============================================================================
+# FRONTEND SPECIFIC (React/Vite)
+# ============================================================================
+client/dist/
+client/build/
+client/.next/
+client/.nuxt/
+
+# Vite
+client/.vite/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Playwright
+test-results/
+playwright-report/
+
+# ============================================================================
+# BACKEND SPECIFIC (Node/Express)
+# ============================================================================
+server/dist/
+server/build/
+server/logs/
+server/uploads/
+
+# PM2
+.pm2/
+ecosystem.config.js.bak
+
+# ============================================================================
+# CI/CD & GITHUB ACTIONS
+# ============================================================================
+.github/workflows/*.log
+.github/workflows/*.bak
+
+# ============================================================================
+# IGNORE NOTHING IMPORTANT
+# ============================================================================
+# Whitelist important files with negation patterns:
+!.github/
+!.gitignore
+!.editorconfig
+!.prettierrc
+!.eslintrc*
+!README.md
+!LICENSE
+!docs/
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!package.json
+!tsconfig.json
+!jest.config.js

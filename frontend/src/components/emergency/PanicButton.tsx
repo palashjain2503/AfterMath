@@ -2,7 +2,11 @@ import { AlertTriangle } from 'lucide-react';
 import { useState } from 'react';
 import EmergencyModal from './EmergencyModal';
 
-const PanicButton = () => {
+interface PanicButtonProps {
+  elderlyName?: string;
+}
+
+const PanicButton = ({ elderlyName }: PanicButtonProps) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -14,7 +18,11 @@ const PanicButton = () => {
       >
         <AlertTriangle size={28} />
       </button>
-      <EmergencyModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <EmergencyModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        elderlyName={elderlyName}
+      />
     </>
   );
 };

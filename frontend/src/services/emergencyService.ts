@@ -7,4 +7,20 @@ export const mockAlerts: EmergencyAlert[] = [
   { id: '4', type: 'inactivity', message: 'No activity for 4 hours', timestamp: '2026-02-25 16:45', resolved: true, severity: 'medium' },
 ];
 
-export const triggerEmergency = async () => ({ success: true });
+import axios from 'axios';
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5005/api';
+
+export const triggerEmergency = async (elderlyName: string): Promise<any> => {
+  try {
+    const response = await axios.post(`${API_URL}/v1/alerts/sos`, {
+      elderlyName,
+    });
+    return response.data;
+  } catch (error: any) {
+    throw {
+      message: error.response?.data?.message || error.message,
+      status: error.response?.status,
+    };
+  }
+};

@@ -2,7 +2,7 @@ require('dotenv').config()
 const app = require('./app')
 const initializeRAGModule = require('./modules/rag/init')
 
-const PORT = process.env.PORT || 5004
+const PORT = process.env.PORT || 5005
 
 // Initialize RAG module on startup
 initializeRAGModule().then(() => {

@@ -17,6 +17,7 @@ app.use(cors({
       'http://localhost:5174',
       'http://localhost:5175',
       'http://localhost:3000',
+      'http://localhost:8080',
       process.env.CLIENT_URL
     ]
     if (!origin || allowedOrigins.includes(origin)) {
@@ -58,9 +59,9 @@ app.get('/', (req, res) => {
 
 // API Routes
 app.use('/api/v1/alerts', require('./modules/alerts/routes'))
+app.use('/api/v1/auth', require('./modules/auth/routes'))
 app.use('/api/chatbot', require('./modules/chatbot/routes'))
 app.use('/api/rag', require('./modules/rag/routes'))
-// app.use('/api/auth', require('./modules/auth/routes'))
 // app.use('/api/users', require('./modules/users/routes'))
 
 // 404 Handler

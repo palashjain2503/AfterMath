@@ -1,6 +1,23 @@
 import MBCard from '@/components/common/Card';
-import { mockConversations } from '@/services/chatService';
 import { MessageSquare } from 'lucide-react';
+import type { Conversation } from '@/types/chat.types';
+
+const mockConversations: Conversation[] = [
+  {
+    id: '1', userId: '1', userName: 'Margaret Johnson',
+    date: '2026-02-28',
+    summary: 'Margaret discussed her morning routine and mentioned feeling slightly confused about her medication schedule.',
+    emotionalTrend: 'Mostly positive with brief anxiety',
+    messages: [],
+  },
+  {
+    id: '2', userId: '1', userName: 'Margaret Johnson',
+    date: '2026-02-27',
+    summary: 'Pleasant conversation about family memories. Margaret recalled her granddaughter\'s birthday.',
+    emotionalTrend: 'Happy and nostalgic',
+    messages: [],
+  },
+];
 
 const RecentConversations = () => (
   <MBCard>

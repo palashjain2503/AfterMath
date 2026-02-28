@@ -280,7 +280,7 @@ RAG_CHUNK_OVERLAP=100
 ### Method 1: Use API
 
 ```bash
-curl -X POST http://localhost:5000/api/rag/documents \
+curl -X POST http://localhost:5004/api/rag/documents \
   -H "Content-Type: application/json" \
   -d '{
     "content": "Your document text here...",
@@ -299,7 +299,7 @@ curl -X POST http://localhost:5000/api/rag/documents \
 3. Load via API:
 
 ```bash
-curl -X POST http://localhost:5000/api/rag/load \
+curl -X POST http://localhost:5004/api/rag/load \
   -H "Content-Type: application/json" \
   -d '{"directory": "health"}'
 ```
@@ -408,7 +408,7 @@ chunkingSettings: {
 ### Check Knowledge Base Health
 
 ```bash
-curl http://localhost:5000/api/rag/stats
+curl http://localhost:5004/api/rag/stats
 # Returns document count, collection info, etc.
 ```
 

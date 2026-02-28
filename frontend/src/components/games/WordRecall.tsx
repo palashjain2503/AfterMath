@@ -22,7 +22,7 @@ const WordRecall = () => {
     setRecalled([]);
     setInput('');
     setScore(0);
-    setTimeout(() => setPhase('recall'), 5000);
+    setTimeout(() => setPhase('recall'), 5004);
   };
 
   useEffect(() => { startGame(); }, []);
